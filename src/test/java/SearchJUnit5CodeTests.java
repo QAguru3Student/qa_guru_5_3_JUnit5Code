@@ -14,7 +14,7 @@ public class SearchJUnit5CodeTests {
         open("https://github.com/");
         //Перейти в раздел Wiki
         $(byName("q")).setValue("Selenide").pressEnter();
-        $$("ul.repo-list li").first().$("a").click();
+        $("ul.repo-list li a").click();
         $$("li.d-flex").find(text("Wiki")).click();
         //Проверить наличие страницы и провалиться в нее
         $("#wiki-pages-box").$(byText("SoftAssertions")).click();
