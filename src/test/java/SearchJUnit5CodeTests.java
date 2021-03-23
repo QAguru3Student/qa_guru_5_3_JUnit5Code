@@ -15,9 +15,9 @@ public class SearchJUnit5CodeTests {
         //Перейти в раздел Wiki
         $(byName("q")).setValue("Selenide").pressEnter();
         $("ul.repo-list li a").click();
-        $$("li.d-flex").find(text("Wiki")).click();
+        $(byText("Wiki")).click();
         //Проверить наличие страницы и провалиться в нее
-        $("#wiki-pages-box").$(byText("SoftAssertions")).click();
+        $(byText("SoftAssertions")).click();
         //Проверить наличие кода для JUnit5
         $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
     }
